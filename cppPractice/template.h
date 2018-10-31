@@ -35,7 +35,4 @@ template <typename T> const Complex<T> operator /(const Complex<T>&, const Compl
 
 // Returns GCD of two integers
 int gcd(int, int);
-
-// Returns number of digits in an int (e.g. 10 returns 2, -10 returns 3)
-int digits (int);
 #endif

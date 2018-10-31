@@ -42,22 +42,6 @@ int gcd(int a, int b) {
 	return div;
 }
 
-int digits (int n) {
-	if (n == 0) {
-		return 1;
-	}
-	int d = 0;
-	if (n < 0) {
-		// d++;
-		n = -n;
-	}
-	while (n >= 1) {
-		d++;
-		n = n/10;
-	}
-	return d;
-}
-
 template <typename T> Complex<T>::Complex(const T& real = 0, const T& imaginary = 0) 
 :real_(real),
  imaginary_(imaginary) {
