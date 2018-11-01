@@ -1,8 +1,12 @@
 import java.math.BigInteger;
+import java.util.Random;
 
+// Uses Big Integer for much more size than long, so using many native methods
+// Make sure you understand how each thing here would be done with regular longs.
+// (GCD and basic ops are easy, modexp already implemented - CRT, monty mod exp harder)
 public class RSA {
     public static final BigInteger exp = new BigInteger(new byte[] {1,0,1});
-    public static final BigInteger one = new BigInteger(new byte[] {1});
+    private static final Random rand = new Random();
     public BigInteger pk;
     private BigInteger sk;
     public BigInteger n;
@@ -16,13 +20,21 @@ public class RSA {
         p = p1;
         q = p2;
         n = p.multiply(q);
-        pp = p1.subtract(one);
-        qq = p2.subtract(one);
+        pp = p1.subtract(BigInteger.ONE);
+        qq = p2.subtract(BigInteger.ONE);
         phi = pp.multiply(qq).divide(pp.gcd(qq));
         pk = exp;
+        sk = pk.modPow(phi.subtract(BigInteger.ONE), n);
     }
 
+    public BigInteger encrypt(BigInteger input) { return input.modPow(pk, n); }
+
+    public BigInteger decrypt(BigInteger cipher) { return cipher.modPow(sk, n); }
+
     public static void main(String[] args) {
-        System.out.println(exp);
+        BigInteger message = BigInteger.valueOf(1234567);
+        RSA tester = new RSA(BigInteger.probablePrime(20, rand), BigInteger.probablePrime(20, rand));
+        System.out.println(tester.decrypt(tester.encrypt(message)));
+        System.out.println(tester.encrypt(tester.decrypt(message)));
     }
 }

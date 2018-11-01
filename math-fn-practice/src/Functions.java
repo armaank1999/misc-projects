@@ -44,11 +44,6 @@ public class Functions {
         return returnee;
     }
 
-    public static BigInteger montyModExp(BigInteger x, BigInteger y, BigInteger m) {
-        BigInteger returnee = RSA.one;
-        return returnee;
-    }
-
     // Log Approximations
     public static double lnApprox(double x) { return ln2 * logApprox(x); }
 
