@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="240e751e-4d12-4b89-a425-94b8e1dba3b3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Complex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Complex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functions.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,24 +22,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2358" />
+          <entry key="java" value="3365" />
           <entry key="txt" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2358" />
+          <entry key="JAVA" value="3365" />
           <entry key="PLAIN_TEXT" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
+          <entry key="JAVA" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="1" />
+          <entry key="java" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -46,24 +47,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Complex.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="16" selection-start-column="16" selection-end-column="16" />
+              <folding>
+                <element signature="method#Complex#0;class#Complex#0" />
+                <element signature="method#square#0;class#Complex#0" />
+                <element signature="method#Complex#1;class#Complex#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Functions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="92" column="1" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
+            <state relative-caret-position="2">
+              <caret line="81" column="96" selection-start-line="81" selection-start-column="96" selection-end-line="81" selection-end-column="96" />
               <folding>
+                <element signature="n#!!doc;n#factorials#0;n#Functions#0" />
                 <element signature="e#408#409#0" expanded="true" />
                 <element signature="e#433#434#0" expanded="true" />
-                <element signature="method#repeatedSquaring#0;class#Main#0" />
-                <element signature="method#repeatedSquaring#1;class#Main#0" />
-                <element signature="method#repeatedSquaring#2;class#Main#0" />
+                <element signature="method#repeatedSquaring#0;class#Functions#0" />
+                <element signature="method#repeatedSquaring#1;class#Functions#0" />
+                <element signature="method#repeatedModSquaring#0;class#Functions#0" />
                 <element signature="method#logApprox#0;class#F#0" />
                 <element signature="method#expTaylor#0;class#F#0" />
                 <element signature="method#twoPowApprox#0;class#Functions#0" />
-                <element signature="e#2553#2554#0" expanded="true" />
-                <element signature="e#2577#2578#0" expanded="true" />
-                <element signature="e#2634#2635#0" expanded="true" />
-                <element signature="e#2658#2659#0" expanded="true" />
+                <element signature="e#2748#2749#0" expanded="true" />
+                <element signature="e#2772#2773#0" expanded="true" />
+                <element signature="e#2829#2830#0" expanded="true" />
+                <element signature="e#2853#2854#0" expanded="true" />
                 <element signature="method#sin#0;class#Functions#0" />
                 <element signature="method#cos#0;class#Functions#0" />
               </folding>
@@ -72,10 +88,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Complex.java">
+        <entry file="file://$PROJECT_DIR$/src/RSA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+            <state relative-caret-position="45">
+              <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+              <folding>
+                <element signature="e#653#654#0" expanded="true" />
+                <element signature="e#689#690#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FFT.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="16" selection-start-column="16" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -98,6 +127,7 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/functions.java" />
         <option value="$PROJECT_DIR$/src/Complex.java" />
+        <option value="$PROJECT_DIR$/src/RSA.java" />
         <option value="$PROJECT_DIR$/src/Functions.java" />
       </list>
     </option>
@@ -158,7 +188,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541023660549" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541063268062" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -176,7 +206,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Functions">
+  <component name="RunManager" selected="Application.RSA">
     <configuration name="Functions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Functions" />
       <module name="math-fn-practice" />
@@ -194,12 +224,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RSA" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RSA" />
+      <module name="math-fn-practice" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Functions" />
+      <item itemvalue="Application.RSA" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RSA" />
         <item itemvalue="Application.Functions" />
         <item itemvalue="Application.Main" />
       </list>
@@ -278,28 +317,52 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Complex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
+          <folding>
+            <element signature="method#Complex#0;class#Complex#0" />
+            <element signature="method#square#0;class#Complex#0" />
+            <element signature="method#Complex#1;class#Complex#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FFT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RSA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+          <folding>
+            <element signature="e#653#654#0" expanded="true" />
+            <element signature="e#689#690#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Functions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="92" column="1" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
+        <state relative-caret-position="2">
+          <caret line="81" column="96" selection-start-line="81" selection-start-column="96" selection-end-line="81" selection-end-column="96" />
           <folding>
+            <element signature="n#!!doc;n#factorials#0;n#Functions#0" />
             <element signature="e#408#409#0" expanded="true" />
             <element signature="e#433#434#0" expanded="true" />
-            <element signature="method#repeatedSquaring#0;class#Main#0" />
-            <element signature="method#repeatedSquaring#1;class#Main#0" />
-            <element signature="method#repeatedSquaring#2;class#Main#0" />
+            <element signature="method#repeatedSquaring#0;class#Functions#0" />
+            <element signature="method#repeatedSquaring#1;class#Functions#0" />
+            <element signature="method#repeatedModSquaring#0;class#Functions#0" />
             <element signature="method#logApprox#0;class#F#0" />
             <element signature="method#expTaylor#0;class#F#0" />
             <element signature="method#twoPowApprox#0;class#Functions#0" />
-            <element signature="e#2553#2554#0" expanded="true" />
-            <element signature="e#2577#2578#0" expanded="true" />
-            <element signature="e#2634#2635#0" expanded="true" />
-            <element signature="e#2658#2659#0" expanded="true" />
+            <element signature="e#2748#2749#0" expanded="true" />
+            <element signature="e#2772#2773#0" expanded="true" />
+            <element signature="e#2829#2830#0" expanded="true" />
+            <element signature="e#2853#2854#0" expanded="true" />
             <element signature="method#sin#0;class#Functions#0" />
             <element signature="method#cos#0;class#Functions#0" />
           </folding>

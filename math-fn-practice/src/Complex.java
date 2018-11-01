@@ -2,9 +2,9 @@ public class Complex {
     double a;
     double b;
 
-    public Complex(double a, double b) {
-        this.a = a;
-        this.b = b;
+    public Complex(double real, double imag) {
+        a = real;
+        b = imag;
     }
 
     public Complex multiply(Complex that) {
@@ -15,9 +15,15 @@ public class Complex {
         return new Complex(this.a + that.a, this.b + that.b);
     }
 
+    public void square() {
+        double newA = a*a - b*b;
+        b = 2*a*b;
+        a = newA;
+    }
+
     // Magnitude 1
     public Complex(double angle) {
-        this.a = Functions.cos(angle);
-        this.b = Functions.sin(angle);
+        a = Functions.cos(angle);
+        b = Functions.sin(angle);
     }
 }
