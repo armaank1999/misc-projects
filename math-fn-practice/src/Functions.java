@@ -1,5 +1,3 @@
-import java.math.BigInteger;
-
 public class Functions {
     //<editor-fold desc="Precomputed constants">
     private static final long[] factorials = {1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600, 6227020800L,
@@ -11,15 +9,19 @@ public class Functions {
 
     public static void main(String[] args) {
         System.out.println(repeatedSquaring(cos(pi/4),2));
+        System.out.println(shiftDouble(1048576, -20));
     }
 
-    // Exponentiation to integer powers
+    // Exponentiation to integer powers. 61C inspired shifts and loop unrolling
     public static long repeatedSquaring(long x, long y) {
         long returnee = 1;
         while (y > 0) {
-            if (y % 2 == 1) returnee *= x;
+            if ((y & 1) == 1) returnee *= x;
             x *= x;
-            y /= 2;
+            y = y >> 1;
+            if ((y & 1) == 1) returnee *= x;
+            x *= x;
+            y = y >> 1;
         }
         return returnee;
     }
@@ -27,9 +29,12 @@ public class Functions {
     public static double repeatedSquaring(double x, long y) {
         double returnee = 1;
         while (y > 0) {
-            if (y % 2 == 1) returnee *= x;
+            if ((y & 1) == 1) returnee *= x;
             x *= x;
-            y /= 2;
+            y = y >> 1;
+            if ((y & 1) == 1) returnee *= x;
+            x *= x;
+            y = y >> 1;
         }
         return returnee;
     }
@@ -37,19 +42,37 @@ public class Functions {
     public static long repeatedModSquaring(long x, long y, long m) {
         long returnee = 1;
         while (y > 0) {
-            if (y % 2 == 1) returnee = (returnee * x) % m;
+            if ((y & 1) == 1) returnee = (returnee * x) % m;
             x = (x * x) % m;
-            y /= 2;
+            y = y >> 1;
+            if ((y & 1) == 1) returnee = (returnee * x) % m;
+            x = (x * x) % m;
+            y = y >> 1;
         }
         return returnee;
+    }
+
+    // This function is slower than regular mul in Java but illustrates a fun concept used below
+    // Works for negative shifts as left shifts too
+    public static double shiftDouble(double x, long y) {
+        return Double.longBitsToDouble(Double.doubleToLongBits(x) + (y << 52));
+    }
+
+    // Root - inspired by fast inv sqrt
+    public static double nthRoot(double x, int n) {
+        return 0;
+    }
+
+    public static double inverseRoot(double x, int n) {
+        return 0;
     }
 
     // Log Approximations
     public static double lnApprox(double x) { return ln2 * logApprox(x); }
 
     public static double logApprox(double x) {
-        long interpolated = java.lang.Double.doubleToLongBits(x);
-        double mantissa = java.lang.Double.longBitsToDouble((interpolated & 0x000fffffffffffffL) | 0x3ff0000000000000L);
+        long interpolated = Double.doubleToLongBits(x);
+        double mantissa = Double.longBitsToDouble((interpolated & 0x000fffffffffffffL) | 0x3ff0000000000000L);
         return (interpolated >> 52) + (-0.344845 * mantissa + 2.024658) * mantissa - 1024.674873;
     }
 
@@ -75,16 +98,7 @@ public class Functions {
 
     public static double powApprox(double x, double y) { return twoPowApprox(y * logApprox(x)); }
 
-    // Root
-    public static double nthRoot(double x, int n) {
-        return 0;
-    }
-
-    public static double inverseRoot(double x, int n) {
-        return 0;
-    }
-
-    // Trig
+    // Trig by Taylor series
     public static double sin(double x) {
         double returnee = x, factor = x;
         int i = 2;
