@@ -3,12 +3,10 @@ public class Functions {
     private static final long[] factorials = {1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600, 6227020800L,
         87178291200L, 1307674368000L, 20922789888000L, 355687428096000L, 6402373705728000L, 121645100408832000L, 2432902008176640000L};
     private static final double ln2 = 0.693147180559945309417232121458;
-    private static final double pi = 3.1415926535897932384626433832795;
-    private static final double e = 2.7182818284590452353602874713526624977572470937;
     //</editor-fold>
 
     public static void main(String[] args) {
-        System.out.println(repeatedSquaring(cos(pi/4),2));
+        System.out.println(repeatedSquaring(cos(Math.PI/4),2));
         System.out.println(shiftDouble(1048576, -20));
     }
 

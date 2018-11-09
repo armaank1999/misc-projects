@@ -11,9 +11,7 @@ public class Complex {
         return new Complex(this.a * that.a - this.b * that.b, this.a * that.b + that.a * this.b);
     }
 
-    public Complex add(Complex that) {
-        return new Complex(this.a + that.a, this.b + that.b);
-    }
+    public Complex add(Complex that) { return new Complex(this.a + that.a, this.b + that.b); }
 
     public void square() {
         double newA = a*a - b*b;
@@ -25,5 +23,11 @@ public class Complex {
     public Complex(double angle) {
         a = Functions.cos(angle);
         b = Functions.sin(angle);
+    }
+
+    public static Complex[] fromReal(double[] real) {
+        Complex[] returnee = new Complex[real.length];
+        for (int i = 0; i < real.length; i++) returnee[i] = new Complex(real[i], 0);
+        return returnee;
     }
 }
