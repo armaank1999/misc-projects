@@ -56,3 +56,27 @@ def get_phi():
     phi = memoize_naturals(phi)
     return phi
 
+primes = [2]
+next_starting_point = 3
+
+def add_next_prime():
+    global next_starting_point
+    x = next_starting_point
+    sqrtx = math.sqrt(x)
+    while True:
+        for prime in primes:
+            if prime > sqrtx:
+                primes.append(x)
+                next_starting_point = x+2
+                return
+            if x%prime == 0:
+                break
+        x += 2
+        sqrtx = math.sqrt(x)
+
+def get_nth_prime(n):
+    if n <= len(primes):
+        return primes[n-1]
+    for _ in range(len(primes),n):
+        add_next_prime()
+    return primes[-1]
