@@ -4,3 +4,6 @@
 *.xml
 *.iml
 *.DS_Store
+*/out/
+*.idea/
+*.ipynb_checkpoints/
